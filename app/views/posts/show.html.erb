@@ -1,0 +1,11 @@
+<h1><%= @post.title%></h1>
+<p><%= @post.body%><p>
+
+<%= form_for :postcomment, url:posts_path do |f| %>
+
+
+<p><%= f.label "Write comment"%></p>
+<%= f.text_area :text, cols: 10, rows: 5 %><br />
+
+<p><%= f.submit "Send"%></p>
+<% end %>
