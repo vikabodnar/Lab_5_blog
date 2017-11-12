@@ -9,8 +9,8 @@ def create
 	if @comment.save
 		redirect_to post_path(params[:post_id])
 	else 
-		@comment.errors.full_messages.each do |msg|
-		 @msg = msg
+		@comment.errors.full_messages.each do |msg|  
+		@msg = msg
     end  
     flash[:notice] = "#{@msg}"
     redirect_to post_path(params[:post_id])
