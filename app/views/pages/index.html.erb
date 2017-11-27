@@ -7,6 +7,7 @@
   <p><%= image_tag post.user.avatar.url(:thumb), width: 30, height: 30 %></p>
   <p>Author: <%= post.user.nickname %> | 
    Create at: <%= post.created_at %></p>
+   <p><%= sanitize post.body %></p>
   <% if current_user != nil and current_user.id == post.user_id %>
   <p>
   <%= link_to "Edit",  edit_post_path(post.id) %> or

@@ -2,6 +2,7 @@
 <%= f.text_field :title %><br />
 
 <p><%= f.label :body%></p>
-<%= f.text_area :body, cols: 40, rows: 20 %><br />
+<%= f.text_area :body, :class => "tinymce", :rows => 40, :cols => 120 %>
+<%= tinymce %>
 
 <p><%= f.submit "Save"%></p>
